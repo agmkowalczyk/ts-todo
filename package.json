@@ -1,0 +1,14 @@
+{
+  "name": "ts-todo",
+  "version": "1.0.0",
+  "description": "",
+  "main": "index.js",
+  "scripts": {
+    "compile": "tsc --watch",
+    "sass": "sass --watch --style=compressed ./src/styles.scss ./dist/styles.min.css",
+    "start": "npm run sass && compile"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC"
+}
