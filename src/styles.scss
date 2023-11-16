@@ -1,0 +1,135 @@
+:root {
+  --green: #38ccae;
+  --dark: #1b1b1b;
+}
+
+*,
+*::before,
+*::after {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+}
+
+body {
+  font-family: Arial, Helvetica, sans-serif;
+  font-size: 14px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  min-width: 100vw;
+  min-height: 100vh;
+  background: linear-gradient(to right top, var(--dark), var(--green));
+}
+
+.object {
+  width: 35px;
+  height: 35px;
+  border: 1px solid #fff;
+  transform: rotate(45deg);
+  position: absolute;
+  top: 15%;
+  left: 17%;
+  animation: slideDown 25s linear infinite;
+
+  &::after {
+    content: '';
+    display: block;
+    width: 35px;
+    height: 35px;
+    border: 1px solid #fff;
+    transform: translate(10px, 10px);
+  }
+}
+
+@keyframes slideDown {
+  0% {
+    transform: translateY(0) rotate(45deg);
+  }
+  50% {
+    transform: translateY(70vh) rotate(225deg);
+  }
+  100% {
+    transform: translateY(0) rotate(405deg);
+  }
+}
+
+form {
+  padding: 15px 35px;
+  background: linear-gradient(
+    to right top,
+    rgba(0, 0, 0, 0.35),
+    rgba(0, 0, 0, 0.25)
+  );
+  max-width: 60%;
+  width: 100%;
+  border-radius: 10px;
+  color: #fff;
+  position: relative;
+  backdrop-filter: blur(2px);
+
+  > * {
+    display: block;
+    width: 100%;
+    padding: 10px 0;
+    margin: 5px auto;
+  }
+
+  li {
+    color: #000;
+    padding: 7px;
+    border-bottom: 1px solid rgba(255, 255, 255, 0.3);
+    list-style-type: none;
+
+    label {
+      cursor: pointer;
+    }
+
+    input[type='checkbox'] {
+      margin-right: 5px;
+    }
+  }
+}
+
+hr {
+  padding: 0;
+  margin: 20px 0;
+}
+
+button {
+  background: #ffebd8;
+  border: none;
+  cursor: pointer;
+
+  &:hover {
+    background: #e7b2aa;
+    transition: all 0.3s;
+  }
+}
+
+.categories {
+  li {
+    align-items: center;
+    display: flex;
+  }
+
+  input {
+    margin-right: 8px;
+  }
+}
+
+.general {
+  background-color: #ffc5c5;
+}
+
+.work {
+  background-color: #ffebd8;
+}
+
+.gym {
+  background-color: #c7dca7;
+}
+
+.hobby {
+  background-color: #89b9ad;
+}
