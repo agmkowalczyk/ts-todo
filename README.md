@@ -10,4 +10,4 @@ Simple TODO list in TypeScript
 
 ## Image
 
-![preview](https://github.com/agmkowalczyk/ts-todo/blob/master/screenshot.png "TODO list TypeScript")
+![preview](https://github.com/agmkowalczyk/ts-todo/blob/main/screenshot.png "TODO list TypeScript")
